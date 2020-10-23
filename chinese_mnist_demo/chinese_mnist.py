@@ -10,7 +10,7 @@ pat=re.compile(pattern)
 # res=pat.match(s)
 # print(res.group('label'))
 
-file_path='./data/'
+file_path='./data/data/'
 
 file_names=os.listdir(file_path)
 

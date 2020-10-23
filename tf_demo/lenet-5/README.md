@@ -2,16 +2,16 @@
 
 ## lenet-5网络结构
 1. 
-    - 卷积层,kernel_size:(3,3)，数量6
+    - 卷积层,kernel_size:3，数量6
     - 池化层,pool_size:(2,2)，步长2
 2. 
-    - 卷积层,kernel_size:(3,3)，数量6
+    - 卷积层,kernel_size:3，数量6
     - 池化层,pool_size:(2,2)，步长2
 3. 
-    - 卷积层,kernel_size:(3,3)，数量16
+    - 卷积层,kernel_size:3，数量16
     - 池化层,pool_size:(2,2)，步长2
 4. 
-    - 卷积层,kernel_size:(3,3)，数量16
+    - 卷积层,kernel_size:3，数量16
     - 池化层,pool_size:(2,2)，步长2
 5. flatten层，二维张量拉直成一维张量
 6. 全连接层，120个神经元，激活函数relu

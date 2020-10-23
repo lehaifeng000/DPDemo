@@ -73,7 +73,7 @@ net = keras.models.Sequential([
 
 net.compile(optimizer='adam', loss='sparse_categorical_crossentropy', metrics=['accuracy'])
 
-net.fit(x_train, y_train, epochs=5, batch_size=32,validation_split=0.1)
+net.fit(x_train, y_train, epochs=20, batch_size=32,validation_split=0.1)
 
 # testLoss, testAcc = net.evaluate(x_test, y_test)
 # print(testAcc)
