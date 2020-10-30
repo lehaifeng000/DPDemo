@@ -1,0 +1,2 @@
+  File "tf_demo/resnet/resnet18_cifar10.py", line 7
+SyntaxError: Non-ASCII character '\xe7' in file tf_demo/resnet/resnet18_cifar10.py on line 7, but no encoding declared; see http://python.org/dev/peps/pep-0263/ for details
