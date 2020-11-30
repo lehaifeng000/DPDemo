@@ -5,8 +5,7 @@ from tensorflow import keras
 
 # gpus= tf.config.experimental.list_physical_devices('GPU')
 gpus= tf.config.list_physical_devices('GPU') # tf2.1版本该函数不再是experimental
-# print(gpus) # 前面限定了只使用GPU1(索引是从0开始的,本机有2张RTX2080显卡)
-tf.config.experimental.set_memory_growth(gpus[0], True) # 其实gpus本身就只有一个元素
+tf.config.experimental.set_memory_growth(gpus[0], True) #
 
 mnist = keras.datasets.mnist
 
@@ -17,20 +16,12 @@ test_img = tf.reshape(x_test, (10000, 28, 28, 1))
 
 net = keras.models.Sequential([
     # 卷积层1
-    tf.keras.layers.Conv2D(filters=6, kernel_size=3, activation="relu", input_shape=(28, 28, 1), padding="same"),
+    tf.keras.layers.Conv2D(filters=6, kernel_size=5, activation="relu", input_shape=(28, 28, 1), padding="valid"),
     tf.keras.layers.MaxPool2D(pool_size=(2, 2), strides=2),
 
     # 卷积层2
-    tf.keras.layers.Conv2D(filters=6, kernel_size=3, activation="relu", padding="same"),
+    tf.keras.layers.Conv2D(filters=16, kernel_size=5, activation="relu", padding="valid"),
     tf.keras.layers.MaxPool2D(pool_size=2, strides=2),
-
-    # 卷积层3
-    tf.keras.layers.Conv2D(filters=16, kernel_size=3, activation="relu", padding="same"),
-    tf.keras.layers.MaxPool2D(pool_size=2, strides=2),
-
-    # 卷积层4
-    tf.keras.layers.Conv2D(filters=16, kernel_size=3, activation="relu", padding="same"),
-    tf.keras.layers.MaxPool2D(pool_size=2,strides=2),
 
     tf.keras.layers.Flatten(),
 

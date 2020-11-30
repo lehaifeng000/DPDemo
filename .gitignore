@@ -2,3 +2,4 @@
 .vscode
 chinese_mnist_demo/data
 __pycache__
+nohup.out

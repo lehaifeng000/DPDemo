@@ -24,7 +24,7 @@ random.shuffle(index)
 x_train = x_train[index]
 y_train = y_train[index]
 
-net=resnet.ResNet34()
+net=resnet.ResNet18()
 
 
 net.compile(optimizer='adam', loss='sparse_categorical_crossentropy', metrics=['accuracy'])
